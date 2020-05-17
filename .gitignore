@@ -1,0 +1,3 @@
+.env_sample
+node_modules/
+database.db

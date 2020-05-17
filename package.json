@@ -1,0 +1,22 @@
+{
+  "name": "module2",
+  "version": "1.0.0",
+  "description": "dataku",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "selfie"
+  ],
+  "author": "edy cole",
+  "license": "mbuh",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.0"
+  }
+}

@@ -1,0 +1,38 @@
+1. pastikan npm start berjalan normal
+periksa pada package.json
+ "scripts": {
+    "start": "node index.js"
+  },
+
+2. .env sudah aktif setelah install npm dotenv
+didalamnya ada API_KEY tujuannya agar di github tak nampak
+nanti setelah ke heroku baru di edit
+
+3. buat repository di github
+contohnya dg JSLanjut => copy seperti dibawah:
+…or create a new repository on the command line
+echo "# JSLanjut" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/edycoleee/JSLanjut.git
+git push -u origin master
+                
+…or push an existing repository from the command line
+git remote add origin https://github.com/edycoleee/JSLanjut.git
+git push -u origin master
+
+4: jalankan cmd 
+git init
+git add .
+git commit –m “coba wheather”
+git remote add origin https://github.com/edycoleee/JSLanjut.git
+git push -u origin master
+
+5. login ke glitch ambil dari link github
+https://github.com/edycoleee/JSLanjut
+maka langsung akan tercopy dan bisa dijalankan 
+
+6. heroku
+
+
