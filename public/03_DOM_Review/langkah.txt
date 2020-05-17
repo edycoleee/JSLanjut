@@ -1,0 +1,32 @@
+1. Membuat title , Membuat garis underline
+<section class="container">
+           <!--title-->
+           <div class="title">
+               <h2>Our Reviews</h2>
+               <div class="underline"></div>
+           </div>
+2. membuat pembungkus dengan article, div
+<article class="review">
+kemdian mengisi elemen dalamnya 
+a. mengisi gambar
+               <div class="img-container">
+                   <img src="./person-1.jpg" id="person-img" alt="imgperson"/>
+               </div>
+b. mengisi nama penulis
+<h4 id="author">sara jones</h4>
+c. mengisi job
+<p id="job">ux desainer</p>
+d. mengisi info
+<p id="info">Lorem ipsum</p>
+e. mengisi tombol < dan >
+                <div class="button-container">
+                    <button class="prev-btn">
+                        left<i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="prev-btn">
+                        right<i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+f. mengisi random button 
+<button class="random-btn">srprise me</button>
+3. select 

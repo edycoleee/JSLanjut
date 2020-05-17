@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>LATIHAN 9</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="logo">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="../pages/logo.svg" class="logo-nav" alt="logo1">
+        </div>
+    </div>
+    <div class="menuAtas">
+        <div class="nav-header">
+            <a href="/" class="links">HOME</a>
+        </div>
+    </div>
+        <div class="judul">
+            <h3>JUDUL</h3>
+        </div>
+        <div class="isiHalaman">
+            <section class="section-center">
+
+
+            </section>
+        </div>
+        <div class="footer">
+            <a href="/">HOME</a> |
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+-----------------------------------------------------------------------
+<a href="/" class="links">Home</a>
+
+------------------------------------------------------------------------
+LOAD text
+<p/><p/><p id="poem" />
+
+
+console.log("about to fetch a txt");
+catchPoem()
+  .then((poem) => {
+    document.getElementById("poem").innerText = poem;
+    console.log("yay");
+  })
+  .catch((error) => {
+    console.log("error!");
+    console.error(error);
+  });
+//fetch txt file => text
+async function catchPoem() {
+  const response = await fetch("langkah.txt");
+  return await response.text();
+}
+
+---------------------------------------------------------------------------
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.5fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr 5fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas: "logo logo logo menuAtas"
+    "judul judul judul judul"
+    "isiHalaman isiHalaman isiHalaman isiHalaman"
+    "footer footer footer footer";
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.menuAtas {
+    grid-area: menuAtas;
+}
+
+.judul {
+    grid-area: judul;
+}
+
+.isiHalaman {
+    grid-area: isiHalaman;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+
+
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+  text-align: center;
+}
+
+.rnthl {
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 4px;
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.rntclgreen {
+  background-color: #096;
+  color: #fff !important;
+}
+
+.rntclblue {
+  background-color: #369;
+  color: #fff !important;
+}
+
+.rntclred {
+  background-color: rgb(216, 101, 101);
+  color: #fff !important;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+/*  global classes */
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+  
+}
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+}
+.logo-nav {
+  height: 40px;
+}
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+.social-icons {
+  display: none;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
