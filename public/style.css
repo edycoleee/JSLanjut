@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1.5fr 0.5fr 1fr;
     grid-template-rows: 0.2fr 0.3fr 5fr 1fr;
     gap: 20px 20px;
-    grid-template-areas: "logo logo menuAtas menuAtas"
+    grid-template-areas: "logo logo logo menuAtas"
     "judul judul judul judul"
     "isiHalaman isiHalaman isiHalaman isiHalaman"
     "footer footer footer footer";
@@ -246,8 +246,9 @@ nav {
 .nav-toggle:hover {
   color: var(--clr-primary-1);
 }
-.logo {
-  height: 27px;
+.logo-nav {
+  height: 35px;
+ 
 }
 .links a {
   color: var(--clr-grey-3);
