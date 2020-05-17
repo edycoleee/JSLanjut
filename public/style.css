@@ -247,8 +247,8 @@ nav {
   color: var(--clr-primary-1);
 }
 .logo-nav {
-  height: 35px;
- 
+  height: 40px;
+  width: 250px;
 }
 .links a {
   color: var(--clr-grey-3);
