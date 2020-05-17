@@ -32,7 +32,29 @@ git push -u origin master
 5. login ke glitch ambil dari link github
 https://github.com/edycoleee/JSLanjut
 maka langsung akan tercopy dan bisa dijalankan 
+https://ruby-bow-napkin.glitch.me/
 
 6. heroku
+$ heroku login
+Create a new Git repository
+Initialize a git repository in a new or existing directory
 
+$ cd my-project/
+$ git init
+$ heroku git:remote -a jslanjut
+Deploy your application
+Commit your code to the repository and deploy it to Heroku using Git.
 
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+Existing Git repository
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a jslanjut
+
+jalankan cmd
+git remote -v
+heroku git:remote -a jslanjut
+git push heroku master
+https://jslanjut.herokuapp.com/
