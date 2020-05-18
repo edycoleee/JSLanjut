@@ -1,0 +1,149 @@
+1. setting css  Asus Zenbook UX331UN-EG105T Notebook - Blue [Intel Core i7 8550U/ 16GB/ 512GB SSD/ MX150 2GB/ 13.3 Inch IPS FHD TS/ Win10]
+  /css/main.css  ASUS ZenBook UX433FN # i7-8565U 16GB SSD512 MX150 2GB 14FHD
+2. setting fontawesome
+  /js/all.js
+3. setting script js
+   /js/app.js
+4. preloader
+5. header
+6. banner
+  dibungkus div => <div class="banner">
+  heading1 => tulisan besar
+  h1.banner__title{coffe jukie}
+7. banner icon 
+  dibungkus div => <div class="banner__icons">
+8. membuat icon social media kecil2 
+  dengan fantawesome icon
+  i.fab.fa-.fa-fw 
+  <a href="#" class="banner_social-icon">
+  <i class="fab fa-facebook fa-fw"></i></a>
+9. css body
+-seluruh warna tulisan black
+-font family 'Open Sans', sans-serif;
+-tambah background dari garmbar url('file')
+supaya transparant menambahkan linear gradient
+linear-gradient(rgba(255, 255, 255, 0.575) rgba(255, 255, 255, 0.363))
+10.css global style, menambahkan font
+.bell-fonts{
+    font-family: 'La Belle Aurore', cursive;
+}
+11.gunakan font pada banner di index.html
+<h1 class="banner__title bell-fonts">coffe jukie</h1>
+
+12 css header 
+-setting height = 100 vh ( sesuai dengan ukuran layar)
+-display grid => hanya stu grid tapi besarnya 80%
+dan semua isinya berada di center
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+-position relative => dinamis
+semua yang berada di dalam heacer akan mengikuti css tsb
+
+13 pada ukuran layar kecil max 768px maka settingnya
+background gambar diubah, posisi tengah, ukuran sesuai windows cover,
+fix posisi tidak ikut bergerak, dan gambar tidak berulang/norepeat
+@media screen and (max-width:760px){
+    .header{
+        background: url('../img/headerBcg.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+atau bisa disingkat dalam penulisannya=> singkat banget
+@media screen and (max-width:760px){
+    .header{
+        background: url('../img/headerBcg.jpeg') center/cover fixed no-repeat;
+    }
+}
+
+14 css banner
+posisi text berada center, dan z index 3
+.banner{
+    text-align: center;
+    z-index: 3;
+}
+
+15 css banner banner__title
+tulisan ukuran besar dan berada di center
+.banner__title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--brightYellow);
+}
+
+REMs are a way of setting font-sizes based on the font-size 
+of the root HTML element. They also allow you to quickly scale 
+an entire project by changing the root font-size 
+(for example at a certain media query/screen size).
+A basic and most common example: html font-size is set to 10px, 
+paragraph is set to 1.6rem - 1.6rem * 10px = 16px.
+Setting a root font-size of 10px is the most common 
+scenario when I see people using REMs. It allows 
+for a quick conversion between pixel values to REM 
+values simply by dividing the number by 10.
+
+16. pada ukuran windows >768 pixel ukuran tulisan banner__title 
+menjadi besar
+@media screen and (min-width:768px){
+    .banner__title{
+        font-size: 9rem;
+    }
+}
+
+17. css banner__social-icon
+untuk melakukan simulasi maka diberikan boder hitam dahulu
+.banner__social-icon{
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    border: 0.1rem solid var(--black);
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+18. css banner__social-icon : hover
+saat ada mouse hoover maka warna menjadi kuning 
+mari simulasikan dahulu
+.banner__social-icon:hover{
+    background: var(--brightYellow);
+    color: var(--black);
+}
+
+19. css banner__social-icon -> transition
+agar transisi saat hover smooth maka diberikan setting
+transition: all 0.5s linear;
+
+20. css banner__icons => 4 icon vertikal menjadi 4 horizontal
+masing2 social icons telah di setting pada 17 18 19
+untuk membuat sejajar horisontal maka dilakukan setting menjadi grid
+didalam bungkus banner__icons
+.banner__icons{
+    width: 50%; => ukuran lingkaran menjadi bulat
+                    border radius 50% dg width 50%
+    margin: 0 auto; =>supaya posisi ditengah maka auto atau mengikuti parent
+    display: grid; => display grid (menjadi kotak2 grid)
+    /* grid-template-columns: 2rem 2rem 2rem 2rem; */ => bentuk panjangnya
+    grid-template-columns: repeat(4,2rem); ( menjadi 4 korak grid horisontal)
+        ke empat icon yg vertikal menjadi horisontal
+    grid-column-gap: 0.5rem; => beri jarak tiap icon
+    justify-content: center; => posisi tetap center
+}
+
+21. setting video background => autoplay muted loop
+membuat container pembungkus video karena kita menggunakan 
+3 buah format video yang berbeda agar bisa di multi browser
+kemudian masukkan ke 3 videonya kedalam container
+        <article class="video__container">
+            <video class="video__item" autoplay muted loop>
+                <source src="video/coffee.mp4" type="video/mp4">
+                <source src="video/coffee.ogv" type="video/ogv">
+                <source src="video/coffee.webm" type="video/webm">
+                    Your Browser does not support video tag
+            </video>
+        </article>
+
+22. css video background
