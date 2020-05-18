@@ -1,0 +1,60 @@
+svg editor
+https://vectorpaint.yaks.co.nz/
+lorem ipsum generator
+https://loremipsum.io/generator/?n=5&t=p
+random user
+https://randomuser.me/
+image uploud
+https://cloudinary.com/
+
+Langkah Nav
+1. <nav>
+2. <div class="nav-center">
+untuk center class content
+3. <div class="nav-header">
+header untuk menempatkan logo dan simbol menu 
+saat layar mengecil, dan klik muncul menu + icon
+<img src="./logo.svg" class="logo" alt="logo1">
+<button class="nav-toggle"><i class="fas fa-bars"></i></button>
+4. <ul class="links">
+untuk menempatkan link2 menu itu sendiri
+<li><a href="http://127.0.0.1:5500/index.html">home</a></li>
+<li><a href="about.html">about</a></li>
+<li><a href="projects.html">projects</a></li>
+<li><a href="contact.html">contact</a></li>
+5. <ul class="social-icons">
+class untuk menempatkan link medsos
+<li><a href="https://www.twitter.com"><i class="fab fa-facebook"></i></a></li>
+<li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.twitter.com"><i class="fab fa-behance"></i></a></li>
+<li><a href="https://www.twitter.com"><i class="fab fa-linkedin"></i>/a></li>
+<li><a href="https://www.twitter.com"><i class="fab fa-sketch"></i></a></li>
+6. dengan css link menu akan muncul otomatis
+saat posisi layar mengecil, tapi tidak bisa ditutup,
+jika dengan js maka dengan tombol menu di kanan,
+maka semua menu bisa hide hanya dengan melakukan button action
+untuk melakukan aktivasi kelas .link atau .show-link
+a. melakukan elect elemen link
+const navtogle = document.querySelector(".nav-toggle");
+const links = document.querySelector(".links");
+console.log(navtogle,links);
+b. listen click button
+navtogle.addEventListener("click", function(){
+    console.log(links.classList);
+    // mencari kelas yang mengandung "links"
+    console.log("kelas mengandung random");
+    console.log(links.classList.contains("mbuh"));
+    console.log("kelas mengandung links");
+    console.log(links.classList.contains("links"));
+    //if then else then
+})
+c. perintah if then aktivasi .link
+    if(links.classList.contains("show-links")){
+        links.classList.remove("show-links");
+        console.log("remove");
+    } else {
+        links.classList.add("show-links");
+        console.log("add");
+    }
+d. togle menggunaan bawaan js tanpa if-then
+links.classList.toggle("show-links")

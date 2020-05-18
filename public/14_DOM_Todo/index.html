@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js" />
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js" />
+    
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="./logo.svg" class="logo" alt="logo1">
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="/">home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!--Code start here-->
+        <!-- tambah data-simpan ke local memory
+        fungsi edit, hapus, clear dari memory
+        1. section center  -->
+        <section class="section-center">
+            <!-- 2.form utk terima submit -->
+            <form action="" class="grocery-form">
+                <!-- 3. alert jika ada yang salah entry-->
+                <p class="alert"></p>
+                <!-- 4. judul -->
+                <h3>To Do List</h3>
+                <!-- 5. bungkus supaya berjajar dalam satu div class -->
+                <div class="form-control">
+                    <!-- 6. input text  -->
+                    <input type="text" id="grocery" placeholder="masukkan pekerjaan" />
+                    <!-- 7.tombol submit -->
+                    <button class="submit-btn" type="submit">Simpan</button>
+                </div>
+            </form>
+            <!-- 8. bungkus list dibawahnya nanti yg isinya item 
+                dan 2 tombol hapus dan edit dan 1 tombol clear data-->
+            <div class="grocery-container">
+                
+
+                
+                <div class="container2">
+                    <button class="clear-btn" type="button">clear items</button>
+                </div>
+        </section>
+        <!--Code end here-->
+    </main>
+    <!--javascript-->
+    <script src="app.js"></script>
+</body>
+
+</html>
