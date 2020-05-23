@@ -2,244 +2,183 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="normalize.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>JAVASCRIPT LANJUTAN</title>
+    <title>MOHON MAAF LAHIR BATIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <div class="grid-container">
+    <header>
         <div class="logo">
-                <!-- nav header -->
-                <div class="nav-header">
-                    <img src="./logo.svg" class="logo-nav" alt="logo1">
-            </div>
+            <img src="img/logo.svg" alt="">
         </div>
-        <div class="menuAtas">
-            <div class="nav-header">
-                <a href="/" class="links">HOME</a>
-            </div>
-        </div>
-        <div class="judul">
-            <h3>Java Script Lanjutan</h3>
-        </div>
-        <div class="isiHalaman">
-            <section class="section-center">
-                <h3>Pelajaran ini berisi tentang : </h3>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Maaf</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">Siapa</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Kenangan</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <table style="width:100%">
-                    <tr>
-                        <th><a href="./pages/satu.html" class="btn">Materi 1</a></th>
-                        <td>VAR
-                            <span class="rnthl rntclred"> LET </span>
-                            <span class="rnthl rntclred"> CONST </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/dua.html" class="btn">Materi 2</a></th>
-                        <td>FUNCTION 
-                            <span class="rnthl rntclred"> => </span>
-                            ARROW FUNCTION</td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/tiga.html" class="btn">Materi 3</a></th>
-                        <td> <span class="rnthl rntclred"> FOR OF </span>
-                            & HOF</td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/empat.html" class="btn">Materi 4</a></th>
-                        <td>ARRAY,
-                            <span class="rnthl rntclred"> MAP </span>
-                            , FILL</td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/lima.html" class="btn">Materi 5</a></th>
-                        <td>REDUCER <span class="rnthl rntclred"> FILTER </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/enam.html" class="btn">Materi 6</a></th>
-                        <td><span class="rnthl rntclred"> SORT </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/tujuh.html" class="btn">Materi 7</a></th>
-                        <td>
-                            <span class="rnthl rntclred"> FETCH </span>
-                            Gambar, TXT File
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/delapan.html" class="btn">Materi 8</a></th>
-                        <td>Fetch <span class="rnthl rntclred"> CSV </span>
-                            tampilkan ke grafik
-                            <span class="rnthl rntclgreen"> chart.js </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/sembilan.html" class="btn">Materi 9</a></th>
-                        <td>Fetch 
-                            <span class="rnthl rntclred"> JSON API </span>
-                            tampilkan dalam map
-                            <span class="rnthl rntclgreen"> leaflet.js </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/sepuluh.html" class="btn">Materi 10</a></th>
-                        <td>Instalasi 
-                            <span class="rnthl rntclred"> Node </span>
-                            Server, 
-                            <span class="rnthl rntclgreen"> Express </span> 
-                            Middleware,
-                            <span class="rnthl rntclblue"> NeDB </span>
-                            Database
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/sebelas.html" class="btn">Materi 11</a></th>
-                        <td>Routing <span class="rnthl rntclgreen"> Express </span>
-                            ,<span class="rnthl rntclred"> POST </span>
-                            (Simpan Data) => API => 
-                            <span class="rnthl rntclblue"> NeDB </span></td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/duabelas.html" class="btn">Materi 12</a></th>
-                        <td><span class="rnthl rntclred"> GET </span>
-                            Ambil Data => API => 
-                            <span class="rnthl rntclblue"> NeDB </span></td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/tigabelas.html" class="btn">Materi 13</a></th>
-                        <td>Fetch 
-                            <span class="rnthl rntclred"> JSON API </span>
-                            dg token via 
-                            <span class="rnthl rntclgreen"> Express </span>
-                            dan POST ke
-                            <span class="rnthl rntclblue"> NeDB </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/tigabelas.html" class="btn">Materi 14</a></th>
-                        <td>
-                            <span class="rnthl rntclred"> GET </span>
-                            <span class="rnthl rntclblue"> NeDB </span>
-                            <span class="rnthl rntclgreen"> leaflet.js </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./pages/limabelas.html" class="btn">Materi 15</a></th>
-                        <td> DEPLOYMENT
-                            <span class="rnthl rntclred"> GIT HUB </span>
-                            <span class="rnthl rntclblue"> GLITCH </span>
-                            <span class="rnthl rntclgreen"> HEROKU </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">FINISH :</th>
-                        <td>sumber dari Codingtrain</td>
-                    </tr>
-                    <tr>
-                        <td>selamat belajar</td>
-                    </tr>
-                </table>
-                <p></p>
-                <table style="width:60%">
-                    <tr>
-                        <th><a href="./01_DOM_Color/index.html" class="btn">Latihan 1</a></th>
-                        <td>Color Flicker
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./01_DOM_Color/hex.html" class="btn">Latihan 2</a></th>
-                        <td>Color Hex
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./02_DOM_Counter/index.html" class="btn">Latihan 3</a></th>
-                        <td>COUNTER
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./03_DOM_Review/index.html" class="btn">Latihan 4</a></th>
-                        <td>Review
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./04_DOM_Navbar/index.html" class="btn">Latihan 5</a></th>
-                        <td>NavBar
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./05_DOM_Sidebar/index.html" class="btn">Latihan 6</a></th>
-                        <td>Side Bar
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./06_DOM_Modal/" class="btn">Latihan 7</a></th>
-                        <td>Modal
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./07_DOM_Question/index.html" class="btn">Latihan 8</a></th>
-                        <td>Question
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./08_DOM_Menu/index.html" class="btn">Latihan 9</a></th>
-                        <td>Menu Item
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./09_DOM_Video/index.html" class="btn">Latihan 10</a></th>
-                        <td>Video Loading
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./10_DOM_Scroll/index.html" class="btn">Latihan 11</a></th>
-                        <td>Scroll Pages
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./11_DOM_TabHTML/index.html" class="btn">Latihan 12</a></th>
-                        <td>Tab HTML
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./12_DOM_Countdown/index.html" class="btn">Latihan 13</a></th>
-                        <td>Countdown
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./13_DOM_Lorem/index.html" class="btn">Latihan 14</a></th>
-                        <td>Lorem Generator
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./14_DOM_Todo/index.html" class="btn">Latihan 15</a></th>
-                        <td>To Do List
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><a href="./15_DOM_Slider/index.html" class="btn">Latihan 16</a></th>
-                        <td>Picture Slider
-                        </td>
-                    </tr>
-                </table>
-                <p></p>
-                <table style="width:60%">
-                    <tr>
-                        <th><a href="./kopi/index.html" class="btn">Project 1</a></th>
-                        <td>Kopi Juki
-                        </td>
-                    </tr>
-                </table>    
-            </section>
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            minal aidin wal faizin<strong>mohon maaf lahir batin</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Edy-Tutik-Afin-Silmi</p>
+        <img src="img/fam.jpg" alt="a picture of family smiling" class="intro__img">
+    </section>
+
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">M A A F</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Maafkan</h3>
+                <p>Apabila ada jejak membekas lara, ada ucap merangkai dusta, ada laku menoreh luka. Dari jauh ku
+                    kirimkan salam maaf dan doa. Mohon maaf lahir dan batin, Selamat hari Raya Idul Fitri </p>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Amal Saleh</h3>
+                <p>Taqabbalallahu Minna wa Minkum Shiyamana wa Shiyamakum.
+                    “Semoga Allah menerima amal saleh saya dan kamu, amal puasa saya dan kamu”.</p>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Jabat Tangan</h3>
+                <p>Meski wajah tak dapat berjumpa. Tangan tak bisa saling menjabat. Semoga melalui pesan singkat ini
+                    bisa menjadi jembatan di hari kemenangan ini. Selamat hari raya Idul fitri. Mohon maaf lahir dan
+                    batin, ya</p>
+            </div> <!-- / service -->
+        </div> <!-- / services -->
+
+        <a href="#work" class="btn">Kenangan</a>
+    </section>
+
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Siapa</h2>
+        <p class="section__subtitle section__subtitle--about">Edy-Tutik-Afin-Silmi</p>
+
+        <div class="about-me__body">
+            <p>Harta paling berharga adalah sabar. Teman paling setia adalah amal. Ibadah paling indah adalah ikhlas.
+                Identitas paling tinggi adalah iman. Pekerjaan paling berat adalah memaafkan. Namun, aku tahu kita akan
+                berusaha untuk melakukan pekerjaan yang paling berat tersebut. Mohon maaf lahir dan batin atas khilaf
+                dan salah selama ini</p>
+            <p></p>
         </div>
-        <div class="footer">
-            <a href="/">HOME</a> | <a href="">kosong</a>
+
+        <img src="img/famber3.jpg" alt="Jane leaning against a bus" class="about-me__img">
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">Kenangan</h2>
+        <p class="section__subtitle section__subtitle--work">Sebuah Gambar Yang Menyatakan Kita Bersama</p>
+
+        <div class="portfolio">
+            <!-- Portfolio item 01 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/DLH.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 02 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/patifam1.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 03 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/famAllpati.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 04 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/bukber1.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 05 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/bukber2.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 06 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/pde.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 07 -->
+            <a href="portfolio-item.html" class="portfolio__item">
+                <img src="img/ipsrs.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 08 -->
+            <a href="#" class="portfolio__item">
+                <img src="img/suka1.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 09 -->
+            <a href="#" class="portfolio__item">
+                <img src="img/suka2.jpg" alt="" class="portfolio__img">
+            </a>
+
+            <!-- Portfolio item 0 0-->
+            <a href="#" class="portfolio__item">
+                <img src="img/20150823_064432.jpg" alt="" class="portfolio__img">
+            </a>
         </div>
-    </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- replace with your own email address -->
+        <a href="mailto:edycoleee@gmail.com" class="footer__link">edycoleee@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://codepen.io">
+                    <i class="fab fa-codepen"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="http://dribbble.com">
+                    <i class="fab fa-dribbble"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+
 </body>
 
 </html>
