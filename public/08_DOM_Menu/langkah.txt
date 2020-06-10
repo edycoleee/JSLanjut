@@ -1,0 +1,34 @@
+<!--Code start here-->
+1.Section baru
+    <section class="menu">
+2.<!-- title -->
+        <div class="title">
+            <h2>Menu Kita</h2>
+            <div class="underline"></div>
+        </div>
+        <!-- filter button -->
+        
+3.<!-- menu items -->
+        <div class="section-center">
+4.<!-- single item -->
+            <article class="menu-item">
+5.gambar
+<img src="menu-item.jpeg" alt="menu1" class="photo">
+                <div class="item-info">
+6. judel  dn harga single item
+<header><h4>roti pancake</h4>
+<h4 class="price">150K</h4>
+</header>
+7. artikel
+<p>During the night, the blissful city of Chefchaouen is </p>
+
+                </div>
+            </article>
+            <!-- end single item -->
+        </div>
+    </section>
+       <!--Code end here-->
+    </main>
+
+8. Dinamis, masukkan template menu
+

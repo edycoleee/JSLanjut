@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+/* justifying Grid----------------------------------------------------- */
+.grid1 {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 150px 150px 150px;
+    grid-auto-rows: 100px;
+    grid-gap: 20px;
+    width: 700px;
+    height: 500px;
+    border: 2px solid #666;
+    /* justify-content : start,center,end,space-between,space-around => secara horizontal*/
+    justify-content: space-between;
+    /* align-content : start,center,end,space-between,space-around => secara vertical*/
+    align-content: center;
+}
+.grid1 .one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.grid1 div:nth-child(odd) {
+    background: rgb(22, 138, 233);
+}
+.grid1 div:nth-child(even) {
+    background: rgba(0, 238, 255, 0.644);
+}
+/* justifying Item----------------------------------------------------- */
+.grid2 {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(90px -auto);
+    grid-gap: 20px;
+    width: 700px;
+    height: 500px;
+    border: 2px solid #666;
+    /* justify dan alignmen item disini akan menghasilkan kotak kecil 
+    seuai dengan posisi: start, center,end
+    align-items: center;
+    justify-items: center; */
+}
+.grid2 .one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    /* justify dan align-self disini akan menghasilkan 
+    seuai dengan posisi: start, center,end */
+    align-self: center;
+    
+}
+.grid2 .two {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+.grid2 .three {
+    grid-column: 2 / 4;
+    grid-row:  3;
+    /* default nilai adalah scretch */
+    justify-self: stretch;
+}
+.grid2 .four {
+    grid-column: 1;
+    grid-row:  2 / 4;
+    /* justify dan align-self disini akan menghasilkan 
+    seuai dengan posisi: start, center,end */
+    justify-self: end;
+}
+.grid2 div:nth-child(odd) {
+    background: rgb(22, 138, 233);
+    border: 1px solid black;
+}
+.grid2 div:nth-child(even) {
+    background: rgba(0, 238, 255, 0.644);
+}
+
+/* grid template area----------------------------------------------------- */
+.grid3 {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(90px -auto);
+    grid-gap: 20px;
+    width: 700px;
+    height: 500px;
+    border: 2px solid #666;
+    /* justify dan alignmen item disini akan menghasilkan kotak kecil 
+    seuai dengan posisi: start, center,end
+    align-items: center;
+    justify-items: center; */
+}
+@media screen and (min-width: 800px) {
+    .grid3 {
+        grid-template-columns: 2fr 4fr;
+    }
+}
+.grid3 .header {
+
+}
+.grid3 .article {
+
+}
+.grid3 .aside {
+
+}
+.grid3 .footer {
+
+}
+.grid3 div:nth-child(odd) {
+    background: rgb(22, 138, 233);
+    border: 1px solid black;
+}
+.grid3 div:nth-child(even) {
+    background: rgba(0, 238, 255, 0.644);
+}
+
+@media screen and (min-width: 800px) {
+    body {
+      background-color: rgba(144, 238, 144, 0.596);
+    }
+  }

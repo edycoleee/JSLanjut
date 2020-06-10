@@ -1,0 +1,337 @@
+1. setting css  Asus Zenbook UX331UN-EG105T Notebook - Blue [Intel Core i7 8550U/ 16GB/ 512GB SSD/ MX150 2GB/ 13.3 Inch IPS FHD TS/ Win10]
+  /css/main.css  ASUS ZenBook UX433FN # i7-8565U 16GB SSD512 MX150 2GB 14FHD
+2. setting fontawesome
+  /js/all.js
+3. setting script js
+   /js/app.js
+4. preloader
+5. header
+6. banner
+  dibungkus div => <div class="banner">
+  heading1 => tulisan besar
+  h1.banner__title{coffe jukie}
+7. banner icon 
+  dibungkus div => <div class="banner__icons">
+8. membuat icon social media kecil2 
+  dengan fantawesome icon
+  i.fab.fa-.fa-fw 
+  <a href="#" class="banner_social-icon">
+  <i class="fab fa-facebook fa-fw"></i></a>
+9. css body
+-seluruh warna tulisan black
+-font family 'Open Sans', sans-serif;
+-tambah background dari garmbar url('file')
+supaya transparant menambahkan linear gradient
+linear-gradient(rgba(255, 255, 255, 0.575) rgba(255, 255, 255, 0.363))
+10.css global style, menambahkan font
+.bell-fonts{
+    font-family: 'La Belle Aurore', cursive;
+}
+11.gunakan font pada banner di index.html
+<h1 class="banner__title bell-fonts">coffe jukie</h1>
+
+12 css header 
+-setting height = 100 vh ( sesuai dengan ukuran layar)
+-display grid => hanya stu grid tapi besarnya 80%
+dan semua isinya berada di center
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+-position relative => dinamis
+semua yang berada di dalam heacer akan mengikuti css tsb
+
+13 pada ukuran layar kecil max 768px maka settingnya
+background gambar diubah, posisi tengah, ukuran sesuai windows cover,
+fix posisi tidak ikut bergerak, dan gambar tidak berulang/norepeat
+@media screen and (max-width:760px){
+    .header{
+        background: url('../img/headerBcg.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+atau bisa disingkat dalam penulisannya=> singkat banget
+@media screen and (max-width:760px){
+    .header{
+        background: url('../img/headerBcg.jpeg') center/cover fixed no-repeat;
+    }
+}
+
+14 css banner
+posisi text berada center, dan z index 3
+.banner{
+    text-align: center;
+    z-index: 3;
+}
+
+15 css banner banner__title
+tulisan ukuran besar dan berada di center
+.banner__title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--brightYellow);
+}
+
+REMs are a way of setting font-sizes based on the font-size 
+of the root HTML element. They also allow you to quickly scale 
+an entire project by changing the root font-size 
+(for example at a certain media query/screen size).
+A basic and most common example: html font-size is set to 10px, 
+paragraph is set to 1.6rem - 1.6rem * 10px = 16px.
+Setting a root font-size of 10px is the most common 
+scenario when I see people using REMs. It allows 
+for a quick conversion between pixel values to REM 
+values simply by dividing the number by 10.
+
+16. pada ukuran windows >768 pixel ukuran tulisan banner__title 
+menjadi besar
+@media screen and (min-width:768px){
+    .banner__title{
+        font-size: 9rem;
+    }
+}
+
+17. css banner__social-icon
+untuk melakukan simulasi maka diberikan boder hitam dahulu
+.banner__social-icon{
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    border: 0.1rem solid var(--black);
+    border-radius: 50%;
+    padding: 0.25rem;
+}
+
+18. css banner__social-icon : hover
+saat ada mouse hoover maka warna menjadi kuning 
+mari simulasikan dahulu
+.banner__social-icon:hover{
+    background: var(--brightYellow);
+    color: var(--black);
+}
+
+19. css banner__social-icon -> transition
+agar transisi saat hover smooth maka diberikan setting
+transition: all 0.5s linear;
+
+20. css banner__icons => 4 icon vertikal menjadi 4 horizontal
+masing2 social icons telah di setting pada 17 18 19
+untuk membuat sejajar horisontal maka dilakukan setting menjadi grid
+didalam bungkus banner__icons
+.banner__icons{
+    width: 50%; => ukuran lingkaran menjadi bulat
+                    border radius 50% dg width 50%
+    margin: 0 auto; =>supaya posisi ditengah maka auto atau mengikuti parent
+    display: grid; => display grid (menjadi kotak2 grid)
+    /* grid-template-columns: 2rem 2rem 2rem 2rem; */ => bentuk panjangnya
+    grid-template-columns: repeat(4,2rem); ( menjadi 4 korak grid horisontal)
+        ke empat icon yg vertikal menjadi horisontal
+    grid-column-gap: 0.5rem; => beri jarak tiap icon
+    justify-content: center; => posisi tetap center
+}
+
+21. setting video background => autoplay muted loop
+membuat container pembungkus video karena kita menggunakan 
+3 buah format video yang berbeda agar bisa di multi browser
+kemudian masukkan ke 3 videonya kedalam container
+        <article class="video__container">
+            <video class="video__item" autoplay muted loop>
+                <source src="video/coffee.mp4" type="video/mp4">
+                <source src="video/coffee.ogv" type="video/ogv">
+                <source src="video/coffee.webm" type="video/webm">
+                    Your Browser does not support video tag
+            </video>
+        </article>
+
+22. css video background
+.video__container{
+    position: absolute; => selalu fix di tengah
+    top: 0; => paling atas
+    left: 0; => paling kiri
+    width: 100%; => lebar 100% sesuai ukuran video
+    height: 100%; => tinggi sesuai dengan ukuran video
+    z-index: -1; => berada pada posisi paling belakang dan banner berada paling depan
+}
+
+23. css video item
+.video__item{
+    width: 100%; => ukuran lebar 100 %
+    height: 100%; => ukuran lebar 100 %
+    object-fit: cover; => video fit menyesuaikan layar
+}
+
+24. nav button yang berada di kanan atas dari fantawesome
+        <div class="navBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+25. css nav button
+.navBtn{
+    position: fixed; => posisi fix walau halan scroll dan membesar mengecil
+    top: 5%; => 5% dari atas
+    right: 5%; => 5% dari kanan
+    font-size: 3.5rem; => ukuran 
+    color: var(--brightYellow); => warna kuning cerah
+    cursor: pointer; => bentuk pointer saat hover
+}
+
+26. css animasi nav button => ukuran button =>
+kecil/1-besar/1.5-kecil1
+nama animasi adalah pulse
+@keyframes pulse{
+    0%{
+        transform: scale(1); => ukuran posisi awal
+    }
+    50%{
+        transform: scale(1.5); => ukuran posisi 50%
+    }
+    100%{
+        transform: scale(1); => ukuran posisi akhir
+    }
+}
+
+27 css animasi aktifasi pulse ke .navBtn
+.navBtn{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    font-size: 3.5rem;
+    color: var(--brightYellow);
+    cursor: pointer;
+    /* attach animation */
+    animation-name: pulse; => aktivasi
+    animation-duration: 2s; => durasi animasi
+    animation-iteration-count: infinite; => animasi selamanya bisa juga disetting angka
+}
+
+28. navigasi menu 
+untuk membuat navigasi menu ini karena posisinya pada 
+side bar maka berbentuk ul-li 
+<li> element is used to represent an item in a list. 
+It must be contained in a parent element: an ordered list (<ol>), 
+an unordered list (<ul>), or a menu (<menu>). 
+-li 1 => menampilkan logo dari gambar svg
+-li 2dst => link menu menuju halaman dan home
+nav di bungkus class="nav", ul class="nav__links"
+dan untuk masing2 link class="nav__single-link" utk css 
+        <nav class="nav">
+            <ul class="nav__links">
+                <!-- logo -->
+                <li><a href="a" class="nav__single-link">
+                    <img src="img/navLogo.svg" alt="">
+                </a></li>
+                <!-- menu -->
+                <li><a href="#header" class="nav__single-link">home</a></li>
+                <li><a href="#about" class="nav__single-link">about</a></li>
+                <li><a href="#drink" class="nav__single-link">free</a></li>
+                <li><a href="#work" class="nav__single-link">work</a></li>
+                <li><a href="#contact" class="nav__single-link">contact</a></li>
+                <li><a href="/" class="nav__single-link">Back</a></li>
+            </ul>
+        </nav>
+
+29. css nav menu
+menu sidebar pada posisi fix walau scroll keatas dan kebawah 
+.nav{
+    position: fixed; => posisi fixed
+    top: 0; => posisi paling top
+    left: 0; => posisi paliing kiri
+    height: 100%; => tingginya full halaman maka 100%
+    width: 10rem; => lebar dikira2 10*16pix
+    background: rgba(242, 180, 80, 0.9); => warna background
+    z-index: 3; => index ke 3 atau paling depan dari semua gambar
+}
+
+30. css nav__single-link
+menu ini seperti kotak2/block kebawah yg dinamis saaat hover
+The padding CSS property sets the padding area on all four 
+sides of an element. It is a shorthand for padding-top, 
+padding-right, padding-bottom, and padding-left.
+.nav__single-link{
+    display: block; => display kotak/block
+    text-decoration: none; => decoration none
+    text-transform: capitalize; => capitalize
+    color: var(--brown); => warna tulisan
+    font-size: 1.5rem; => ukuran font 
+    padding: 0.5rem 1rem; => padding atas dan kiri
+    transition: all 0.5s ease-in-out; => transisi saat hoover
+}
+
+31. css nav__single-link:hover
+saat hoover agar membentuk efek 3d, maka tulisan dibuat bergeser 
+sedikit kekanan atau menambahkan padding left
+.nav__single-link:hover{
+    background: var(--brown); => bacground warna berubah biru
+    color: rgba(242, 180, 80, 0.9); => warna tulisan kuning cerah
+    padding-left: 1.5rem; => padding kiri bertambah 
+}
+
+32. css nav__logo:hover
+pada saat hover logo ini akan ikut bacground coklat
+,untuk membedakan agara warnanya bagus maka 
+background kita buat gray dengan menambahkan kelas tambahan pada 
+<a href="a" class="nav__single-link nav__logo">
+sehingga saat hoover akan berbeda dg av__single-link
+.nav__logo:hover{
+    background: var(--grey); => background berwarna grey
+}          
+
+33 switch pause atau run video background
+posisi sebalah kiri bawah
+<!-- video switch -->
+        <div class="video__switch-container">
+            <div class="video__switch">
+                <span>on</span>
+                <span>off</span>
+                <div class="video__switch-btn"></div>
+            </div>
+        </div>
+        <!-- end video switch -->
+
+34. css video__switch-container 
+menghilangkan setting
+.video__switch-container{
+    display: none;
+}
+kemudian mengatur tampilan saat posisi min width 768
+saat tampilan video muncul maka switch ini tampak
+@media screen and (min-width:768px){
+    .video__switch-container{
+        display: block; => berbentuk kotak
+        position: absolute; => supaya terlihat sementara absolute
+        bottom: 5%; => posisi bawah 
+        right: 5%; => posisi kanan
+        z-index: 3; => dibawahnya video
+    }
+}
+
+35. css video__switch
+sebenernya ini adalah sebuah tulisan saja yang bearada di belakang
+    .video__switch{
+        position: relative; => relative terhadap parent yg absolute
+        width: 5rem; => lebarnya tulisan
+        background: var(--yellow); => warna bakground kuning
+        text-transform: uppercase; => text uppercase
+        display: flex; +> display flex
+        justify-content: space-between; => ada jarak diantaranya
+        padding: 0.25rem; : =>padding 
+        cursor: pointer; => pointer saat hover
+        border-radius: 0.5rem; => radius border
+    }
+
+36. css video__switch-btn
+ini sebenernya hanya sebuah kotak yang menutupi tulisan vide switch
+nanti akan bergeser saat di klik, 
+sementara hanya ditampilkan saja
+.video__switch-btn{
+        position: absolute; => absolute
+        top: 0; => dalam container top 0
+        left: 0; => dalam container left 0
+        height: 100%; => height  full
+        width: 50%; => width separo nya sejajar
+        background: var(--brown); => background warna coklat
+        border-radius: 0.5rem; => radius sama dengan yang atas
+    }

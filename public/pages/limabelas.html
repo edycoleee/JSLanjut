@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>PELAJARAN 15</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="logo">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="./logo.svg" class="logo-nav" alt="logo1">
+        </div>
+    </div>
+    <div class="menuAtas">
+        <div class="nav-header">
+            <a href="/" class="links">HOME</a>
+        </div>
+    </div>
+        <div class="judul">
+            <h3>Deployment</h3>
+        </div>
+        <div class="isiHalaman">
+            <section class="section-center">
+                <p id="poem" />
+            </section>
+        </div>
+        <div class="footer">
+            <a href="/">HOME</a> |
+        </div>
+    </div>
+    <script>
+        console.log('about to fetch a txt');
+        catchPoem()
+            .then(poem => {
+                document.getElementById('poem').innerText = poem;
+                console.log('yay');
+            })
+            .catch(error => {
+                console.log('error!');
+                console.error(error);
+            });
+        //fetch txt file => text
+        async function catchPoem() {
+            const response = await fetch('limabelas.txt');
+            return await response.text();
+        }
+    </script>
+</body>
+
+</html>

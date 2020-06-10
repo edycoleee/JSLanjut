@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <style>
+        #issMap {
+            height: 360px;
+        }
+    </style>
+
+    <title>PELAJARAN 9</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="logo">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="./logo.svg" class="logo-nav" alt="logo1">
+        </div>
+    </div>
+    <div class="menuAtas">
+        <div class="nav-header">
+            <a href="/" class="links">HOME</a>
+        </div>
+    </div>
+        <div class="judul">
+            <h3>Fetch JSON API tampilkan dalam map LEAFLET.JS</h3>
+        </div>
+        <div class="isiHalaman">
+            <section class="section-center">
+                
+                <table style="width:100%">
+                    <tr>
+                        <th>
+                            1. ambil data koordinat dari :
+                            'https://api.wheretheiss.at/v1/satellites/25544'
+                        </th>
+                        <td> v </td>
+                    </tr>
+                    <tr>
+                        <th>2. operasi array agar data sesuai
+                        </th>
+                        <td> v </td>
+                    </tr>
+                    <tr>
+                        <th>3.
+                        </th>
+                        <td> v </td>
+                    </tr>
+                    <tr>
+                        <th>4. tampilkan pada grafik
+                            menampilkan data dengan leaflet.js ,
+                        </th>
+                        <td> v </td>
+                    </tr>
+                </table>
+                <h1> Where the ISS</h1>
+                <p>
+                    latitude: <span id="lat"></span>°
+                    <br>
+                    longitude: <span id="lon"></span>°
+
+                </p>
+                <div id="issMap"></div>
+            </section>
+        </div>
+        <div class="footer">
+            <a href="/">HOME</a> | <a href="">kosong</a>
+        </div>
+    </div>
+    <script src="sembilan.js"></script>
+</body>
+
+</html>

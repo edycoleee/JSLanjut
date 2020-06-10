@@ -1,0 +1,201 @@
+/* 
+float  
+value : none, left, right
+normal flow vs out of flow
+*/
+
+.kelompok1{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+.kelompok1 div{
+    width: 100px;
+    height: 100px;
+}
+.satu{
+    background-color: salmon;
+}
+.dua{
+    background-color: limegreen;
+    float: right;
+}
+.tiga{
+    background-color: lightblue;
+}
+
+/* 
+float biasanya digunakan utk 
+-text wrapping (teks mengelilingi gambar/ elemen lain)
+-image gallery (membuat serangkaian gambar menjadi galery)
+-multi-column layout (membuat halaman beberapa column)
+
+posistion 
+value ada 4: static, realative, absolute, fixed
+-static adalah nilai default dari tiap2 elemen 
+ketika tidak diberi properti position
+-menggunakan position selain static (non-static), akan 
+membuat sebuah elemen seolah2 berbeda dimensi dari elemen lainnya
+-elemen yang diberi position selain static dapat menggunakan properti
+top,left,bottom dan right untuk mengatur posisinya
+
+*/
+.kelompok2{
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+.kelompok2 div{
+    width: 100px;
+    height: 100px;
+}
+.dua_satu{
+    background-color: salmon;
+}
+.dua_dua{
+    background-color: limegreen;
+    position: relative;
+}
+.dua_tiga{
+    background-color: lightblue;
+}
+
+*{box-sizing: border-box;}
+/* pelatihan 1 defining grid------------------------------------------ */
+/* ukuran menggunakan px maka tidak dinamis sesuai ukuran browser */
+.grid1{
+    display: grid;
+    /* menjadikan 3 kolom ukuran 200px berurutan ke kanan*/
+    grid-template-columns: 200px 200px 200px;
+    /* menjadikan baris1 200px baris berikutnya 100px*/
+    grid-template-rows: 200px 100px;
+    /* tak ada pengaruhnya */
+    grid-auto-rows: 100px;
+    /* jarak antar kolom 20px */
+    /* grid-column-gap: 20px; */
+    /* jarak antar baris */
+    /* grid-row-gap: 20px; */
+    /* memberikan gap kolom dan baris jika nilainya sama  */
+    grid-gap: 20px;
+}
+.grid1 div {
+    border: 1px solid rgb(0,95,107);
+    border-radius: 3px;
+    background-color: rgba(0,95,107,0.8);
+    padding: 2em;
+    color: #fff;
+    font-size: 120%;
+}
+
+/* pelatihan 2 menggunakan fr unit-------------------------------------- */
+/* ukuran menggunakan fr maka grid dinamis sesuai ukuran browser */
+.grid2{
+    display: grid;
+    /* membentuk 3 kolom yg sama dan dinamis sesuai ukuran browser */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* membentuk 3 kolom dg kolom 1 2x kolom lainnya */
+    grid-template-columns: 2fr 1fr 1fr;
+    /* membentuk 3 kolom dengan kolom 3 dengan ukuran fix 300px */
+    grid-template-columns: 2fr 1fr 300px;
+    grid-gap: 20px;
+}
+div {
+    border: 1px solid rgb(0,95,107);
+    border-radius: 3px;
+    padding: 2em;
+    color: #fff;
+    font-size: 120%;
+}
+.ganjil{
+    background-color: rgba(0,95,107,0.8);
+}
+.genap{
+    background-color: rgba(68, 229, 250, 0.8);
+}
+
+/* pelatihan 3 menggunakan repeat----------------------- --------------- */
+.grid3{
+    display: grid;
+    grid-gap: 20px;
+    /* 3 kolom dg ukuran 1f */
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 kolom ukuran 1fr dan 2fr */
+    grid-template-columns: repeat(2, 1fr 2fr);
+    /* 3 kolom menggabungkan dengan ukuran fix */
+    grid-template-columns: 200px repeat(2, 1fr);
+}
+
+/* pelatihan 4 menggunakan min-max-------------------------------------- */
+.grid4{
+    display: grid;
+    grid-gap: 20px;
+    /* 3 kolom dg ukuran minmax 1fr 1fr */
+    grid-template-columns: minmax(100px, 300px) 1fr 1fr;
+    /* 3 kolom ukuran sama dengan minmax auto */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(60px, auto);
+}
+
+/* pelatihan 5 menggunakan placement order------------------------------- */
+.grid5{
+    display: grid;
+    grid-gap: 20px;
+    /* 3 kolom dg ukuran 1fr*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 100px;
+    /* urutan kotak menggunakan kolom */
+    grid-auto-flow: column;
+}
+/* menggunakan order */
+.grid5 div:nth-child(2){
+    order: 1;
+}
+
+/* pelatihan 6 menggunakan auto fill auto fit---------------------------- */
+.grid6{
+    display: grid;
+    grid-gap: 20px;
+    /* auto-fill dengan kolom satuan px */
+    /* maka akan terbentuk kolom 150px dan tacking jika windows mengecil */
+    grid-template-columns: repeat(auto-fill, 150px);
+    /* auto-fill dengan kolom kombinasi minmax */
+    /* tetap menjaga max 150px */
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    /* auto-fit dengan kolom kombinasi minmax */
+    /* akan fit jika kolom lebih */
+    grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+}
+
+/* pelatihan 7 menggunakan auto placement---------------------------- */
+.judul1{
+margin: 20px 0 40px 0;
+}
+.colors{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 2px;
+    grid-auto-rows: minmax(80px, auto);
+    border: 1px solid rgb(0,95,107);
+}
+.colors li{
+    border-radius: 1em;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: rgba(0,95,107,0.8);
+}
+.span2{
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+.span4{
+    grid-column-end: span 2;
+    grid-row-end: span 3;
+}
+.span3{
+    grid-column-end: span 4;
+}

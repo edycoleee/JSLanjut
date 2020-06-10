@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    <style>
+        #checkinMap {
+            height: 360px;
+            margin: 8px 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>PELAJARAN 13</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="logo">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <img src="./logo.svg" class="logo-nav" alt="logo1">
+            </div>
+        </div>
+        <div class="menuAtas">
+            <div class="nav-header">
+                <a href="/" class="links">HOME</a>
+            </div>
+        </div>
+        <div class="judul">
+            <h3>GET Ambil Data => API => NEDB</h3>
+        </div>
+        <div class="isiHalaman">
+            <section class="section-center">
+                <p>lihat di script <b>dibawah </b></p>
+                <table style="width:100%">
+                    <tr>
+                        <th>
+                            1. package.json
+                        </th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">2. index.js</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>//2. create app <p></p>
+                    </tr>
+
+                    <tr>
+                        <th>3. membuat POST
+                        </th>
+                        <td>
+                            lihat di script
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>4. membuat GET
+                        </th>
+                        <td> lihat di script</td>
+                    </tr>
+                </table>
+                <p></p>
+                <div id="checkinMap"></div>
+
+
+                <h1>API database</h1>
+                <div>sort by <a href="#" id="time">time</a> | <a href="#" id="mood">mood</a></div>
+
+            </section>
+        </div>
+        <div class="footer">
+            <a href="/">HOME</a> | <a href="">kosong</a>
+        </div>
+    </div>
+    <script src="tigabelas.js"></script>
+</body>
+
+</html>

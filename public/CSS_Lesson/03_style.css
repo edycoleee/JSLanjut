@@ -1,0 +1,430 @@
+/* CSS Selector
+1. Selector by ID 
+Id harus unik, digunakan biasanya untuk setting satu ID saja
+=> #blabla{}
+2. Selector by Elemen
+setting untuk elemen => body, header,h1,h2,p, dll
+merupakan multiple selector
+=> .body{}; .p{}
+3. Selector by class
+setting untuk nama kelas tertentu, grup tertentu
+bisa juga memberikan nama kelas berurutan lebih dari 1 nama
+class="kelas1" => .kelas1{};
+class=" kelas1 kelas2" => .kelas1{}; .kelas2{}
+4. div - digunakan untuk membentuk grup dari beberapa elemen 
+.div{} atau nama kelasnya, sehingga dalam bungkus div tersebut terseleksi semua
+<div class="kelas3"> berisi banyak elemen </div> => .keals3{}
+5. span - digunakan untuk membentuk grup satu baris content 
+menggunakan kelas sehingga saat selector tetap memanggil kelasnya
+<span class="kelas4"> bla bla </span> => .kelas4{}
+6. background
+The background shorthand CSS property sets all background style properties at once, 
+such as color, image, origin and size, or repeat method.
+penggunaannya lebih luas bukan hanya warna tapi bisa bermacam2 
+warna
+background: green;
+gradasi
+background: content-box radial-gradient(crimson, skyblue);
+gambar
+background: no-repeat url("../../media/examples/lizard.png");
+gambar dengan dekorasi
+background: left 5% / 15% 60% repeat-x url("../../media/examples/star.png");
+2 gambar dengan pengaturan dekorasi
+background: center / contain no-repeat url("../../media/examples/firefox-logo.svg"),
+            #eee 35% url("../../media/examples/lizard.png");
+
+7. background-color
+The background-color CSS property sets the background color of an element.
+background-color: brown; =>nama warna
+background-color: #74992e; => hexadesimal
+background-color: rgb(255, 255, 128); => rgb
+background-color: rgba(255, 255, 128, .5); => rgb dengan opacity/transparansi
+background-color: hsl(50, 33%, 25%);
+background-color: hsla(50, 33%, 25%, .75);
+
+8. lenght
+The <length> CSS data type represents a distance value. 
+Lengths can be used in numerous CSS properties, 
+such as width, height, margin, padding, border-width, font-size, and text-shadow.
+
+-Relative length units
+Font-relative lengths
+Font-relative lengths define the <length> value in terms of the size of 
+a particular character or font attribute in the font currently in effect in an element or its parent.
+em----------------------------------------------------
+Represents the calculated font-size of the element. 
+If used on the font-size property itself, 
+it represents the inherited font-size of the element.
+rem---------------------------------------------------
+Represents the font-size of the root element (typically <html>). 
+When used within the root element font-size, 
+it represents its initial value (a common browser default is 16px, 
+but user-defined preferences may modify this).
+
+Viewport-percentage lengths
+Viewport-percentage lengths define the <length> value relative to the size of the viewport, 
+i.e., the visible portion of the document. Viewport lengths are invalid in @page declaration blocks.
+vh => height percent of the screen
+Equal to 1% of the height of the viewport's initial containing block. 
+vw => width percent of the screen
+Equal to 1% of the width of the viewport's initial containing block.
+
+Absolute length units
+For high-dpi devices, inches (in), centimeters (cm), and millimeters (mm) 
+are the same as their physical counterparts.
+px
+One pixel. For screen displays, it traditionally represents one device pixel (dot). 
+However, for printers and high-resolution screens, 
+one CSS pixel implies multiple device pixels. 1px = 1/96th of 1in.
+*/
+.ukuran_px{
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+}
+
+.ukuran_persen{
+    width: 80%;
+    height: 100px;
+    background-color: gold;
+}
+.ukuran_satu{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+.ukuran_dua{
+    width: 50%;
+    height: 50%;
+    background-color: greenyellow;
+}
+/*
+9. font-size
+prefer relative lengths (such as em or rem) when setting font-size. relative <length> units.
+<length>
+A positive <length> value. For most font-relative units (such as em and ex),
+the font size is relative to the parent element's font size.
+For font-relative units that are root-based (such as rem), 
+the font size is relative to the size of the font used by the <html> (root) element.
+<percentage>
+A positive <percentage> value, relative to the parent element's font size.
+font-size: 1.2em;
+font-size: x-small;
+font-size: smaller;
+font-size: 12px;
+font-size: 80%;
+
+10.width
+The width CSS property sets an element's width. 
+By default, it sets the width of the content area, 
+but if box-sizing is set to border-box, it sets the width of the border area.
+<length> =>Defines the width as an absolute value.
+<percentage> =>Defines the width as a percentage of the containing block's width.
+auto => The browser will calculate and select a width for the specified element.
+max-content => The intrinsic preferred width.
+min-content=>The intrinsic minimum width.
+fit-content(<length-percentage>) => Uses the fit-content formula with the 
+available space replaced by the specified argument, i.e. min(max-content, max(min-content, <length-percentage>)).
+width: 150px;
+width: 20em;
+width: 75%;
+width: auto;
+
+11. height
+The height CSS descriptor is a shorthand descriptor for setting both 
+min-height and max-height of the viewport. By providing one viewport 
+length value will set both, the minimum height and the maximum height, to the value provided.
+auto => The used value is calculated from the other CSS descriptors' values.
+<length> => A non-negative absolute or relative length.
+<percentage> => A percentage value relative to the width or 
+height of the initial viewport at zoom factor 1.0, for horizontal 
+and vertical lengths respectively. Must be non-negative.
+
+
+12 overflow
+value => visible, auto, hidden, scroll
+visible
+defaulnya content adalah visible
+jika ada content yg keluar dari parent akan diperlihatkan/colapse
+auto 
+jika ada content yg keluar dari parent akan diberi scroll otomatis
+hidden 
+jika ada content yg keluar dari parent akan tidak diperlihatkan
+scroll
+tampilan conten akan selalu berbentuk scroll walau isinya belum 
+sampai memenuhi isi parent
+*/
+.overflow_visible{
+    width: 200px;
+    height: 100px;
+    background-color: greenyellow;
+}
+.overflow_hidden{
+    margin-left: 20em;
+    width: 200px;
+    height: 100px;
+    background-color: greenyellow;
+    overflow: hidden;
+}
+.overflow_scroll{
+    margin-top: 1em;
+    margin-left: 10em;
+    width: 300px;
+    height: 100px;
+    background-color: greenyellow;
+    overflow: scroll;
+}
+
+
+/*
+13 calc
+The calc() CSS function lets you perform calculations when specifying CSS property values. 
+It can be used anywhere a <length>, <frequency>, <angle>, <time>, <percentage>, <number>, or <integer> is allowed.
+width: calc(10px + 100px);
+width: calc(100% - 30px);
+width: calc(2em * 5);
+width: calc(var(--variable-width) + 20px);
+
+14 font-family
+The font-family CSS property specifies a prioritized list of 
+one or more font family names and/or generic family names for the selected element.
+font-family: Georgia, serif;
+font-family: "Gill Sans", sans-serif;
+font-family: system-ui;
+
+15. line-height - if number + font-size
+The line-height CSS property sets the height of a line box. 
+It's commonly used to set the distance between lines of text. 
+On block-level elements, it specifies the minimum height of 
+line boxes within the element. On non-replaced inline elements, 
+it specifies the height that is used to calculate line box height.
+line-height: normal;
+line-height: 2.5;
+line-height: 3em;
+line-height: 150%;
+line-height: 32px;
+
+
+16. letter-spacing
+The letter-spacing CSS property sets the spacing behavior between text characters.
+normal
+The normal letter spacing for the current font. 
+Unlike a value of 0, this keyword allows the user agent to alter the 
+space between characters in order to justify text.
+<length>
+Specifies extra inter-character space in addition to the default space between characters. 
+Values may be negative, but there may be implementation-specific limits. 
+User agents may not further increase or decrease the inter-character space in order to justify text.
+letter-spacing: normal;
+letter-spacing: .2rem;
+letter-spacing: 1px;
+letter-spacing: -1px;
+
+17. word-spacing
+The word-spacing CSS property sets the length of space between words and between tags.
+normal => The normal inter-word spacing, as defined by the current font and/or the browser.
+<length>=> Specifies extra spacing in addition to the intrinsic inter-word spacing defined by the font.
+<percentage>=>Specifies extra spacing as a percentage of the affected character’s advance width.
+word-spacing: normal;
+word-spacing: 1rem;
+word-spacing: 4px;
+word-spacing: 120%;
+word-spacing: -.4ch;
+
+18. text-decoration 
+The text-decoration shorthand CSS property sets the appearance of decorative lines on text. 
+It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, 
+and the newer text-decoration-thickness property.
+text-decoration: underline;
+text-decoration: underline dotted;
+text-decoration: underline dotted red;
+text-decoration: green wavy underline;
+text-decoration: underline overline #FF3028;
+
+19. text-transform
+The text-transform CSS property specifies how to capitalize an element's text.
+It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+text-transform: capitalize;
+text-transform: uppercase;
+text-transform: lowercase;
+
+20. BOX MODEL
+lihat dokumentasi gambar di google
+Margin => Border => Padding => Content
+setiap elemen dihalaman berasda dalam sebuah box
+kita bisa mengatur posisi kotak tersebut
+memberi warna gambar sebagai backgroun dll
+margin => area transparan di sekitar kotak(diluar border)
+padding => area transparan didalam kotak (antara content dan border)
+border => batas di sekeliling content dan padding
+content => konten sebenenarnya di dalam box => text/gambar
+
+
+21 padding
+padding akan mempengaruhi ukuran kotak,
+karena padding tidak akan mengurangi ukuran content tapi menambah
+The padding CSS property sets the padding area on all four sides of an element. 
+It is a shorthand for padding-top, padding-right, padding-bottom, and padding-left.
+padding: 1em;
+padding: 10% 0;
+padding: 10px 50px 20px;
+padding: 10px 50px 30px 0;
+padding: 0;
+
+22. Border
+border akan mempengaruhi ukuran kotak, menambah besar ukuran kotak
+The border shorthand CSS property sets an element's border. 
+It sets the values of border-width, border-style, and border-color.
+border : width style color; => 3px solid black;
+border: solid;
+border: dashed red;
+border: 1rem solid;
+border: thick double #32a1ce;
+border: 4mm ridge rgba(170, 50, 220, .6);
+
+
+22. Margin
+margin-bottom, margin-left, margin-right, margin-top, 
+margin top, bottom yg bertemu secara => vertikal, dipilih yang terbesar
+margin left dan right yg bertemu => horizontal, akan saling menambahkan
+jarak sempit yang terjadi antara margin 2 div dihilangkan dengan menghilangkan spasi/enter
+margin-bottom: 1em;
+margin-bottom: 10%;
+margin-bottom: 10px;
+margin-bottom: 0;
+margin: 10px 3px 30px 5px;  
+top:10px right:3px bottom30px left:5px
+*/
+.margin_satu{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 30px 100px 150px 100px;
+}
+.margin_dua{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+.margin_tiga{
+    width: 50px;
+    height: 50px;
+    background-color: lightgray;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+.margin_empat{
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: auto;
+}
+.margin_lima{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: auto;
+}
+.box_sizing{
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.box1{
+    padding: 10px;
+    background-color: lightseagreen;
+    border: 15px solid red;
+}
+.box2{
+    padding: 30px;
+    border: 10px dashed orange;
+    background-color: lightcoral;
+    margin-top: 20px;
+}
+/*
+23. box-sizing => content-box, border-box
+The box-sizing CSS property sets how the total width and height of an element is calculated.
+content-box 
+gives you the default CSS box-sizing behavior. 
+If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, 
+and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.
+border-box 
+tells the browser to account for any border and padding in the values 
+you specify for an element's width and height. If you set an element's width to 100 pixels,
+that 100 pixels will include any border or padding you added, and the content box will shrink to 
+absorb that extra width. This typically makes it much easier to size elements.
+
+24. display
+setiap tag pada HTML berada dalam sebuah kotak. properti display
+pada CSS mengatur perilaku dari kotak tersebut.
+value display ada4: inline, inline block, block, none
+
+inline 
+-secara default tidak menambahkan baris baru
+-lebar dan tinggi elemennya sebesar konten yang ada di dalamnya
+-kita tidak dapat mengatur lebar dan tinggi elemen inline
+-margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal
+-elemen default: b,strong,i ,em,a,span,button,input,label,select,textarea
+lihat contoh inline => a tidak menambah baris
+-hanya satu elemen => img adalah inline yang bisa di setting lebar dan tinggi
+
+*/
+.inline_a{
+    background-color: green;
+    color: white;
+}
+.inline_img{
+    width: 200px;
+    height: 200px;
+}
+
+/* inline-block
+-tidak ada elemen yg secara default memiliki inline-block
+-kita harus ubah secara manual properti tsb
+-perilaku dasarnya sama dengan elemen inline
+-perbedaannya, elemen inline-block dapat kita atur tinggi dan lebar-nya 
+contohnya pada a biasanya utk navigasi
+mengubah dari inline menjadi block
+*/
+.inline_a{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+/* 
+block 
+-element HTML yang secara default menambahkan baris baru ketika dibuat
+-jika tidak diatur lebarnya, maka lebar default element block
+akan memnuhi lebar dai browser / parent nya
+-kita dapat megatur tinggi dan lebar elemen block
+-di dalam elemen block, kita dapat menyimpan tag dengan elemen inline,
+inline-block, atau menambahkan elemen block lagi
+-contohnya h1-h6, p, ol, ul, li,form, hr, div
+
+*/
+.block_h3, .block_p {
+    background-color: violet;
+}
+
+.inline_main {
+    width: 500px;
+    background-color: blue;
+}
+h2 {
+    background-color: tomato;
+}
+/* 
+none
+digunakan untuk menghilangkan sebuah elemen dari layar HTML 
+*/
+
+/* 
+tag div dan span tidak memiliki arti apapun, keduanya digunakan utk kelompokkan
+tag-tag HTML dan memberikan informasi terhadap tag2 tsb
+
+semua elemen punya default properti display => bisa diganti juga
+div => default => display: block
+span => default => display: inline 
+
+25 css reset menggunakan tanda * untuk selector semua elemen
+*/

@@ -1,0 +1,105 @@
+COLOR flipper
+-----------------------------
+0. index.html
+a. html (!-enter)
+b. style (setelah title sebelum </head>)
+    <!-- style -->
+    <link rel="stylesheet" href="styles.css" />
+c. javascript (sebelum </body>)
+    <!--javascript-->
+    <script src="app.js"></script>
+-----------------------------
+1. Membuat Navbar
+navbar setelah body=> dibungkus dg div
+class="nav-center"
+kemudian buat ul 
+class="nav-links" 
+dengan isi
+a. judul (color flipper)
+b. link (simple, hex,home)
+(index.html,hex.html,http://127.0.0.1:5500/index.html)
+------------------------------
+2. Main content
+membuat <main> dibungkus dg div setelah nav
+class="container"
+------------------------------
+3.Heading h2 (background color)
+dan kemudian span 
+class="color
+--------------------------------
+4. Button dalam main
+class="btn btn-hero" id="btn"
+------------------------------
+5. app.js 
+a. definisikan nilai awal
+yaitu warna2 yang akan kita gunakan 
+saat tombol di klik secara acak, nilai ini
+disimpan dalam bentuk array dengan jumlah 4
+const colors = ["green","red","rgba(133,122,200","#f15025"];
+b. select elemen
+const btn = document.getElementById('btn');
+const color = document.querySelector('.color');
+c. event listener
+btn.addEventListener('click', function(){
+    console.log(document.body);
+})
+untuk mengganti warna seluruh halaman adalah
+mengambil elemen body, pada console
+bisa dilihat body sudah dipilih saat click
+d. untuk mecoba pergantian warna maka
+sementara kita masukkan colors array manual [2]
+//mengganti body backgroundColor
+document.body.style.backgroundColor = colors[2];
+// mengganti text xontent pada span
+color.textContent = colors[2];
+e. setelah berhasil mengganti warna
+maka kita harus generate rondom antara 1-3 sesuai jumlah 
+array colors
+generate random : Math.random
+menghasilkan nilai 0,0..., sampai1
+karena itu perlu * dengan jumlah array
+sehingga hasilnya 0-3, tapi masih ada koma dibelakangnya
+untuk menghilangkan koma menggunakan floor
+Math.floor(nilai)
+keseluruhan menjadi
+Math.floor(Math.random() * colors.length)
+e. membentuk fungsi generate random
+function getRandomNum(){
+    return Math.floor(Math.random() * colors.length);
+}
+f. memasukkan random untuk mengganti array manual
+btn.addEventListener('click', function(){
+    console.log(document.body);
+    //get random number beetwen 0-3
+    const randomNumber = getRandomNum();
+    console.log(randomNumber);
+    document.body.style.backgroundColor = colors[randomNumber];
+    color.textContent = colors[randomNumber];
+})
+
+-----------------------------------end
+Hex.html =>copy from index.html
+1. perubahan pada app.js menjadi hex.js
+2. definisi const hex array untuk mengganti warna
+secara acak => bilangan hexadesimal
+const hex = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+3. select elemen
+const btn = document.getElementById("btn")
+const color = document.querySelector(".color")
+4.buat event dengan tanpa random
+btn.addEventListener('click', function (){
+let hexColor = "#";
+for (let i = 0; i<6; i++){
+    hexColor += hex[11]
+    //hexColor += hex[getRandomNum()]
+    console.log(hexColor);
+}
+    console.log(hexColor);
+    color.textContent=hexColor;
+    document.body.style.backgroundColor=hexColor;
+});
+5. buat random dan gabungkan
+function getRandomNum() {
+    return Math.floor(Math.random() * hex.length)
+}
+======================================end
