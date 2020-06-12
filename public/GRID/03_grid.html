@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Grid 1</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .container-rc1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: 100px 100px;
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+        /* utk sumbu x */
+        /* justify-items: center;
+        align-items: center;  */
+        place-items: stretch stretch;
+        justify-content: stretch;
+    }
+
+    .item {
+        background-color: burlywood;
+        border: 1px solid blue;
+    }
+
+    .container-rc2 {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    /* default order adalah 0 */
+
+    .logo {
+        grid-column: span 2;
+        order: 2;
+    }
+
+    .nav {
+        grid-column: span 8;
+        order: 1;
+    }
+
+    .content {
+        grid-column: 1 / -1;
+        order: 3;
+    }
+
+    .albums {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        border: 1px solid black;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .album {
+        background: rgba(255, 255, 255, 0.2);
+        /* box-shadow: 3px 3px 5px 6px #ccc; */
+        box-shadow: 0 10px 6px -6px #777;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        border: 1px solid black;
+        background-color: burlywood;
+    }
+</style>
+
+<body>
+    <p></p>
+    <a href="/">home</a>
+    <p></p>
+    coba 4 kotak dengan aligmen
+    <div class="container-rc1">
+        <div class="item item1">1</div>
+        <div class="item item2">dua</div>
+        <div class="item item3">3</div>
+        <div class="item item4">empat</div>
+    </div>
+    coba 10 kotak dengan ordering
+    <div class="container-rc2">
+        <div class="item logo">logo</div>
+        <div class="item nav">nav</div>
+        <div class="item content">content</div>
+    </div>
+    latihan album
+    <div class="albums">
+        <div class="album">
+            <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album">
+            <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album">
+            <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album">
+            <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album">
+            <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

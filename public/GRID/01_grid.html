@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Grid 1</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        font-size: 50px;
+    }
+    .container-c {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 100px;
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 5px;
+    }
+
+    .container-r {
+        display: grid;
+        grid-template-rows: 100px 200px;
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc1 {
+        display: grid;
+        grid-template-rows: 100px 200px;
+        grid-template-columns: 200px 400px;
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc3 {
+        display: grid;
+        grid-template-rows: repeat(4, 100px);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc4 .item2 {
+        grid-column: span 2;
+        background-color: chocolate;
+    }
+
+    .container-rc5 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc5 .item2 {
+        grid-column: span 2;
+        grid-row: span 2;
+        background-color: chocolate;
+    }
+
+    .container-rc6 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 40px);
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .container-rc6 .item4 {
+        background-color: chocolate;
+        grid-column: auto / -1;
+    }
+
+    .container-rc7{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        border: 1px solid black;
+        padding: 10px;
+        grid-gap: 10px;
+    }
+
+    .item {
+        background-color: burlywood;
+        border: 1px solid blue;
+        
+    }
+
+
+</style>
+<body>
+    <p></p>
+    <a href="/">home</a>
+    <p></p>
+    coba 2 kolom
+    <div class="container-c">
+        <div class="item">1</div>
+        <div class="item">2</div>
+    </div>
+    <p></p>
+    coba 2 row
+    <div class="container-r">
+        <div class="item">1</div>
+        <div class="item">2</div>
+    </div>
+    <p></p>
+    coba 4 kotak dalam 2 kolom
+    <div class="container-c">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p></p>
+    coba 4 kotak dalam 2 row
+    <div class="container-r">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p></p>
+    coba 4 kotak dalam 4 template
+    <div class="container-rc1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p></p>
+    coba 4 kotak repeat kolom
+    <div class="container-rc2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <p></p>
+    coba 4 kotak repeat row
+    <div class="container-rc3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    coba 8 kotak dengan span
+    <div class="container-rc4">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+    </div>
+    coba 8 kotak dengan span
+    <div class="container-rc5">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+    </div>
+    coba 4 kotak dengan auto fill
+    <div class="container-rc6">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+    coba 4 kotak dengan minmax
+    <div class="container-rc7">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+</body>
+</html>

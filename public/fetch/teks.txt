@@ -1,0 +1,20 @@
+//ini cara fecth sesuatu 
+
+//1. panggil fungsi catch => response / error
+catchRainbow1()
+    then(response => {
+        console.log('yay');
+    })
+    .catch(error => {
+        console.log('error!');
+        console.error(error);
+    });
+
+//2. jalankan fungsi async => response = await fetch (sesuatu)
+// (sesuatu) => definisikan menjadi sebuah object (blob/gambar, text, json)
+// tampilkan object ke elemen html
+async function catchRainbow1() {
+    const response = await fetch('sesuatu');
+    const blob = await response.blob();
+    document.getElementById('gbr_online').src = URL.createObjectURL(blob);
+}

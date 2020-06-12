@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-besar{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigasi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.logo-nav{
+    background-color: chartreuse;
+}
+
+.kata-nav {
+    background-color: coral;
+    margin-left: 10px;
+}
+.menu-login {
+    background-color: chartreuse;
+}
+
+.content-tengah {
+    background-color: lightgoldenrodyellow;
+    height: 500px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-bawah {
+    background-color: lightgray;
+    height: 100px;
+    text-align: center;
+}
+

@@ -1,0 +1,37 @@
+Membuat web asymetric index.html:
+1. membuat kelompok body
+div sebagai class="main-grid" yg berisi =>header, main, footer
+2. header
+berisi logo dan menu
+img class="logo"
+nav class="nav"
+<a href="#" class="nav__link"></a>=>*4
+contact, Book Now, Host, About
+3. main 
+berisi 6 elemen title, paragraph, gambar background
+,sub gambar, paragrap, button
+<h1 class="title">THE BOX</h1>
+<p class="location">Semarang, KT</p>
+<img src="img/house.jpg" alt="" class="primary-img">
+<div class="secondary-images">
+    <img src="img/little-1.jpg" alt="" class="secondary-image">
+    <img src="img/little-2.jpg" alt="" class="secondary-image">
+</div>
+<p class="description">Do </p>
+<button class="btn"></button>
+4. footer
+terdiri dari 3 link dg gambar svg 
+<div class="social-links">
+<a href="#" class="social-link" aria-label="snapchat">
+    <img src="img/snapchat-ghost.svg" alt=""></a>
+<a href="#" class="social-link" aria-label="airbnb">
+    <img src="img/airbnb.svg" alt=""></a>
+<a href="#" class="social-link" aria-label="instagram">
+    <img src="img/instagram.svg" alt=""></a>
+</div>
+
+pertama kali desain css menggunakan ukuran mobile
+dengan menggunakan mozila developer browser
+Ctrl+Shift+M
+
+

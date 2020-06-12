@@ -1,0 +1,59 @@
+div {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+html {
+    font-size: 20px;
+}
+
+.example-rem {
+    width: 10rem;
+    font-size: 30px;
+    border: 2px solid rgb(88, 104, 164);
+}
+
+.example-em {
+    width: 10em;
+    font-size: 30px;
+    border: 2px solid rgb(250, 153, 20);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    border: 2px solid rgb(88, 104, 164);
+    background-color: rgba(88, 104, 164, .2);
+    border-radius: 5px;
+}
+
+.a {
+    width: 50vw;
+    height: 50vh;
+}
+
+.b {
+    width: 50vmax;
+    height: 50vmin;
+}
+
+html {
+    font-size: 30px;
+}
+
+.wrapper {
+    width: 400px;
+    border: 2px dotted rgb(245, 199, 28);
+}
+
+.c {
+    width: 50%;
+    border: 2px solid rgb(88, 104, 164);
+}
+
+.d {
+    width: calc(50% + 50px);
+    border: 2px solid rgb(250, 153, 20);
+}
