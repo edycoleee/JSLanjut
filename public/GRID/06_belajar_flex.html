@@ -1,13 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .flex-container1 {
+            display: flex;
+            background-color: DodgerBlue;
+            flex: 100%;
+        }
+
+        .flex-container1>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container2>div {
+            background-color: #f1f1f1;
+            color: black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .flex-container3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-container3>* {
+            background: #eee;
+            padding: 2rem;
+            text-align: center;
+            border: 5px solid white;
+        }
+
+        .header,
+        .footer {
+            flex: 1 100%;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        .main {
+            flex: 2;
+        }
+
+        .flex-container4 {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-align-items: stretch;
+            align-items: stretch;
+        }
+
+        .flex-item:nth-of-type(1) {
+            flex-grow: 1;
+        }
+
+        .flex-item:nth-of-type(2) {
+            flex-grow: 1;
+        }
+
+        .flex-item:nth-of-type(3) {
+            flex-grow: 2;
+        }
+
+        .flex-item:nth-of-type(4) {
+            flex-grow: 1;
+        }
+
+        .flex-item:nth-of-type(5) {
+            flex-grow: 1;
+        }
+
+        .flex-item {
+
+            background: tomato;
+            border: 3px solid rgba(0, 0, 0, .2);
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .flex-container5 {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex {
+            background: #6AB6D8;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 3px solid #2E86BB;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flex:after {
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 100%;
+            margin-top: 10px;
+            width: 100%;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .flex1 {
+            flex-basis: auto;
+        }
+
+        .flex1:after {
+            content: 'auto';
+        }
+
+        .flex2 {
+            flex-basis: max-content;
+        }
+
+        .flex2:after {
+            content: 'max-content';
+        }
+
+        .flex3 {
+            flex-basis: min-content;
+        }
+
+        .flex3:after {
+            content: 'min-content';
+        }
+
+        .flex4 {
+            flex-basis: fit-content;
+        }
+
+        .flex4:after {
+            content: 'fit-content';
+        }
+
+        .flex5 {
+            flex-basis: content;
+        }
+
+        .flex5:after {
+            content: 'content';
+        }
+
+        .flex6 {
+            flex-basis: fill;
+        }
+
+        .flex6:after {
+            content: 'fill';
+        }
+
+        #main {
+            width: 1100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        #main div {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        #main div:nth-of-type(2) {
+            flex-basis: 300px;
+        }
+    </style>
 </head>
+
 <body>
     <p></p>
     <a href="/">home</a>
     <p></p>
+    Flex 4 kotak
+    default flex direction : row
+    <div class="flex-container1">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+    <p></p>
+    Flex 1 kotak center
+    <div class="flex-container2">
+        <div class="item1">1</div>
+    </div>
+    <p></p>
+    Flex width
+    <div class="flex-container3">
+        <header class="header">Header</header>
+        <main class="main">Main</main>
+        <aside class="sidebar">Sidebar</aside>
+        <footer class="footer">Footer</footer>
+    </div>
+    <p></p>
+    Flex Grow
+    <ul class="flex-container4">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+    </ul>
+    <p></p>
+    Flex flex-basis
+    <ul class="flex-container5">
+        <li class="flex flex1">1: flex-basis test</li>
+        <li class="flex flex2">2: flex-basis test</li>
+        <li class="flex flex3">3: flex-basis test</li>
+        <li class="flex flex4">4: flex-basis test</li>
+        <li class="flex flex5">5: flex-basis test</li>
+    </ul>
+
+    <ul class="flex-container5">
+        <li class="flex flex6">6: flex-basis test</li>
+    </ul>
+
+    <h1>The flex-basis Property</h1>
+
+    <p>Set the initial length of the flex items to 50 pixels, with an exception; set the initial length of the second
+        flex item to 100 pixels:</p>
+    <div id="main">
+        <div style="background-color:coral;">200px</div>
+        <div style="background-color:lightblue;">300px</div>
+        <div style="background-color:khaki;">200px</div>
+        <div style="background-color:pink;">200px</div>
+        <div style="background-color:lightgrey;">200px</div>
+    </div>
 </body>
+
 </html>
