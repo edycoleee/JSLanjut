@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DILAN ONLINE</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ctnr_besar {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 50px 600px 400px auto 300px 200px;
+        }
+
+        .ctnr_besar>div {
+            background-color: lightcyan;
+        }
+
+        .ctnr_logo {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .ctnr_gbrlogo {
+            background-image: url(dlh_image.png);
+            background-size: cover;
+            width: 50px;
+        }
+
+        .ctnr_namalogo {
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+
+        .ctnr_gambar {
+            background-image: url(../GRID/defaultBcg1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            display: grid;
+            grid-template-columns: 400px;
+            grid-auto-rows: 200px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .sub_gambar{
+            background-color: rgba(95, 158, 160, 0.267);
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .ctnr_grafik{
+            display: grid;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .ctnr_box {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: lightgreen;
+        }
+
+        .ctnr_box>div {
+            border: 1px solid blue;
+            width: 150px;
+            height: 200px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            background-color: lightgrey;
+            text-align: center;
+        }
+
+        .ctnr_kecil {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 100px;
+        }
+
+        .ctnr_kecil>div {
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ctnr_besar">
+        <div class="ctnr_logo">
+            <div class="ctnr_gbrlogo"></div>
+            <div class="ctnr_namalogo">DINAS LINGKUNGAN HIDUP</div>
+        </div>
+        <div class="ctnr_gambar">
+            <div class="sub_gambar">
+                <div class="sub_gambar_judul">APLIKASI DINAS LINGKUNGAN HIDUP</div>
+                <div class="sub_gambar_ket">Pelayanan Online</div>
+                <div class="sub_gambar_link">LOGIN</div>
+            </div>
+        </div>
+        <div class="ctnr_grafik">
+            <div>
+                <h1>Grafik IKLH</h1>
+                <canvas id="myChart" width="200" height="50"></canvas>
+            </div>
+        </div>
+        <div class="ctnr_box">
+            <div class="link1">link 1</div>
+            <div class="link1">link 2</div>
+            <div class="link1">link 3</div>
+            <div class="link1">link 4</div>
+            <div class="link1">link 5</div>
+            <div class="link1">link 6</div>
+            <div class="link1">link 7</div>
+        </div>
+        <div class="ctnr_kecil">
+            <div class="ctnr_berita">berita</div>
+            <div class="ctnr_footer">footer</div>
+        </div>
+    </div>
+    <script>
+        // Data from: https://data.giss.nasa.gov/gistemp/
+        // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
+  
+        window.addEventListener('load', setup);
+  
+        async function setup() {
+          const ctx = document.getElementById('myChart').getContext('2d');
+          const globalTemps = await getData();
+          const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: globalTemps.years,
+              datasets: [
+                {
+                  label: 'Dalam Satuan °C',
+                  data: globalTemps.temps,
+                  fill: false,
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {}
+          });
+        }
+  
+        async function getData() {
+          // const response = await fetch('testdata.csv');
+          const response = await fetch('../fetch/ZonAnn.Ts+dSST.csv');
+          const data = await response.text();
+          const years = [];
+          const temps = [];
+          const rows = data.split('\n').slice(1);
+          rows.forEach(row => {
+            const cols = row.split(',');
+            years.push(cols[0]);
+            temps.push(14 + parseFloat(cols[1]));
+          });
+          return { years, temps };
+        }
+  
+      </script>
+</body>
+
+</html>
