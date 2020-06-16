@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DILAN ONLINE</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
         integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
@@ -19,8 +20,7 @@
                 <li>DINAS LINGKUNGAN HIDUP</li>
             </ul>
             <ul class="right-menu">
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="/">HOME</a></li>
+                <li><a href="/">LOGIN</a></li>
             </ul>
         </nav>
 
@@ -35,6 +35,12 @@
             </a>
         </header>
 
+        <!-- Grafik -->
+        <section class="grafik">
+            <h1>GRAFIK IKLH KAB DEMAK</h1>
+            <canvas id="myChart" width="200" height="100"></canvas>
+        </section>
+
         <div class="judul_ijin">
             <div>
                 <h3>DAFTAR PELAYANAN</h3>
@@ -43,7 +49,8 @@
         <!-- Home cards 1 -->
         <section class="home-cards">
             <div>
-                <img src="https://www.pinclipart.com/picdir/big/2-25339_factory-industry-production-icon-icon-industry-vector-clipart.png" alt="">
+                <img src="./images/industri.jpg"
+                    alt="">
                 <h3>Dokumen Lingkungan</h3>
                 <p>
                     Amdal : 999 U/K
@@ -54,7 +61,8 @@
                 <a href="#">Alur <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <img src="https://www.pinclipart.com/picdir/big/105-1058682_bill-on-this-site-to-pay-your-utility.png" alt="" />
+                <img src="./images/IPAL1.jpg"
+                    alt="" />
                 <h3>Izin Pembuangan Air Limbah</h3>
                 <p>
                     9999 usaha/ Kegiatan
@@ -62,7 +70,8 @@
                 <a href="#">Alur<i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <img src="https://www.pinclipart.com/picdir/big/533-5338638_danger-toxic-waste-toxic-waste-clipart-png-download.png" alt="" />
+                <img src="./images/B3.jpg"
+                    alt="" />
                 <h3>Izin Pengelolaan Limbah B3</h3>
                 <p>
                     9999 usaha/ Kegiatan
@@ -70,7 +79,8 @@
                 <a href="#">Alur <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <img src="https://www.pinclipart.com/picdir/big/555-5550657_report-clipart-black-and-white-report-black-and.png" alt="" />
+                <img src="./images/laporan.jpg"
+                    alt="" />
                 <h3>Pelaporan Ketaatan</h3>
                 <p>
                     9999 usaha/ Kegiatan
@@ -81,16 +91,22 @@
             </div>
         </section>
 
+
         <!-- Xbox -->
         <section class="xbox">
             <div class="content">
                 <h2>PENGUMUMAN</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at its layout. The point of using Lorem
                 </p>
-                <a href="#" class="btn">
+                <a href="" class="btn">
+                    LIHAT <i class="fas fa-chevron-right"></i>
+                </a>
+                <p></p>
+                <hr>
+                <p></p>
+                <h2>HASIL UJI AIR SUNGAI</h2>
+                <a href="./MutuAir/index.html" class="btn">
                     LIHAT <i class="fas fa-chevron-right"></i>
                 </a>
             </div>
@@ -108,7 +124,9 @@
                 <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
             </a>
         </section>
-    </div><!-- Footer -->
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
             <div><i class="fas fa-globe fa-2x"></i> DLH Demak</div>
@@ -120,6 +138,7 @@
         </div>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
