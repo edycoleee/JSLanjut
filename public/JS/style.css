@@ -268,6 +268,10 @@
     .links .links-inner {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .card_ipal{
+      height: 250px;
+    }
   }
 
   @media(max-width: 500px) {
@@ -282,4 +286,24 @@
     .links .links-inner ul {
       margin-bottom: 20px;
     }
+
+    .card_ipal{
+      height: 200px;
+    }
+
   }
+
+/* 01_ijinIPAL */
+.showcase_overlay{
+  background-color: rgba(95, 158, 160, 0.486);
+  text-align: start;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.ipal{
+background-color: rgba(95, 158, 160, 0.486);
+border-radius: 40px;
+}
+

@@ -75,7 +75,38 @@
         grid-template-columns: 210px 1fr;
         border: 1px solid black;
         background-color: burlywood;
+        border-radius: 10px;
     }
+
+    .albums1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 300px;
+        border: 1px solid black;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .album1 {
+        background: rgba(255, 255, 255, 0.2);
+        /* box-shadow: 3px 3px 5px 6px #ccc; */
+        box-shadow: 0 10px 6px -6px #777;
+        padding: 20px;
+        display: grid;
+        border: 1px solid black;
+        background-color: burlywood;
+        border-radius: 10px;
+        justify-content: center;
+    }
+
+    .gambar1{
+        background-color: lightgreen;
+    }
+
+    .album__detail{
+        background-color: white;
+    }
+    
 </style>
 
 <body>
@@ -95,7 +126,7 @@
         <div class="item nav">nav</div>
         <div class="item content">content</div>
     </div>
-    latihan album
+    latihan album 1
     <div class="albums">
         <div class="album">
             <img src="sawah1.jpg" class="album__artwork" alt="">
@@ -131,6 +162,60 @@
         </div>
         <div class="album">
             <img src="sawah1.jpg" class="album__artwork" alt="">
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    latihan album 2
+    <div class="albums1">
+        <div class="album1">
+            <div class="gambar1">
+                <img src="sawah1.jpg" class="album__artwork" alt="">
+            </div>
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album1">
+            <div class="gambar1">
+                <img src="sawah1.jpg" class="album__artwork" alt="">
+            </div>
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album1">
+            <div class="gambar1">
+                <img src="sawah1.jpg" class="album__artwork" alt="">
+            </div>
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album1">
+            <div class="gambar1">
+                <img src="sawah1.jpg" class="album__artwork" alt="">
+            </div>
+            <div class="album__detail">
+                <h2>Judul Album 1</h2>
+                <p class="album__artist">Nama Artis 1</p>
+                <p class="album__desc">ini adalah deskripsi dari album 1</p>
+            </div>
+        </div>
+        <div class="album1">
+            <div class="gambar1">
+                <img src="sawah1.jpg" class="album__artwork" alt="">
+            </div>
             <div class="album__detail">
                 <h2>Judul Album 1</h2>
                 <p class="album__artist">Nama Artis 1</p>
