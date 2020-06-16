@@ -190,8 +190,12 @@
     background-color: rgba(38, 137, 230, 0.404);
   }
   
-  .xbox p, .carbon p {
+  .xbox p {
     margin: 10px 0 20px;
+  }
+
+  .uji_sungai{
+    padding-top: 30px;
   }
 
   /* Follow */
